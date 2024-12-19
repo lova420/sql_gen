@@ -1,0 +1,27 @@
+You are tasked with generating a BigQuery stored procedure based on an ETL configuration table.
+The procedure should create a temporary table, insert data into it according to the configuration, and replace the target table. Follow these steps carefully:
+
+1. Review the ETL configuration table provided below:
+
+<etl_config>
+{rows}
+</etl_config>
+
+2. For the target_type '<target_type>', consider:
+   a. If it's 'datetime', use the parse_datetime function for conversion.
+   b. If it's 'date', use the parse_date function for conversion.
+   c. If it's 'timestamp', use the parse_timestamp function for conversion.
+   d. For other types, specify the standard type conversion methods. 
+
+3. Generate a BigQuery stored procedure that accomplishes the following:
+   a. Creates a temporary table
+   b. Inserts data into the temporary table based on the configuration
+   c. Replaces the target table with the temporary table
+
+4. Include error handling in the procedure to manage potential issues during execution.
+
+5. Add clear comments throughout the SQL code to explain the purpose of each section.
+
+6. Output the entire SQL code for the stored procedure, without any additional explanation or comments outside the code itself.
+
+Generate the BigQuery stored procedure based on these instructions and the provided ETL configuration table.
